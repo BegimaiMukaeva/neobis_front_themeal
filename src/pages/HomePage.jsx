@@ -24,7 +24,7 @@ const HomePage = () => {
         e.preventDefault();
 
         if (searchTerm.trim() === "") {
-            setErrorMessage("Enter the name of the dish you want to watch!");
+            setErrorMessage("Enter the name of the meal you want to watch!");
             setSearchResults([]);
             return;
         }
@@ -37,7 +37,7 @@ const HomePage = () => {
                     setSearchResults(response.data.meals);
 
                 } else {
-                    setErrorMessage("Unfined meal, enter something else!");
+                    setErrorMessage("Meal with this name not found!");
                     setSearchResults([]);
                 }
             })
