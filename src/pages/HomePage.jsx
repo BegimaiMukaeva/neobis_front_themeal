@@ -51,7 +51,7 @@ const HomePage = () => {
 
         return (
             <div>
-                {articles.map(article => {
+                {articles && articles.map(article => {
                     return (
                         <div key={article.idMeal}>
                             <Header/>
@@ -80,7 +80,7 @@ const HomePage = () => {
                                 </form>
                                 {errorMessage && <p className="error-message">{errorMessage}</p>}
                                 <div>
-                                    {searchResults.map(meal => (
+                                    {searchResults && searchResults.map(meal => (
                                         <div key={meal.idMeal}>
                                             <Link to={`/meal/${meal.idMeal}`}>
                                                 <div className='meal-block'>
