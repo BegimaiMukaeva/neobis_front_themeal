@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
 import axios from "axios";
-import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 
 
@@ -47,6 +46,9 @@ const HomePage = () => {
             });
 
     };
+    const handleSearchTermChange = (event) => setSearchTerm(event.target.value)
+
+
         return (
             <div>
                 {articles.map(article => {
@@ -72,7 +74,7 @@ const HomePage = () => {
                                         type="text"
                                         placeholder="Find your meal"
                                         value={searchTerm}
-                                        onChange={(e) => setSearchTerm(e.target.value)}
+                                        onChange={handleSearchTermChange}
                                     />
                                     <button type="submit">Search</button>
                                 </form>

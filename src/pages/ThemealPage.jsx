@@ -3,7 +3,6 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 
-
 const ThemealPage = () => {
     const { id } = useParams();
     const [ingredients, setIngredients] = useState([]);
@@ -17,6 +16,7 @@ const ThemealPage = () => {
                 console.error("Error fetching random meal:", error);
             });
     }, [id]);
+
         return (
             <div>
                 {ingredients.map(ingredient =>{
@@ -57,7 +57,6 @@ const ThemealPage = () => {
                 })}
             </div>
         )
-
 }
 
 export default ThemealPage;
