@@ -6,6 +6,9 @@ import Header from "../components/Header";
 
 const HomePage = () => {
     const [articles, setArticles] = useState([]);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [searchResults, setSearchResults] = useState([]);
+    const [errorMessage, setErrorMessage] = useState("");
     useEffect(() => {
         axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
             .then(response => {
@@ -16,9 +19,6 @@ const HomePage = () => {
             });
     }, []);
 
-    const [searchTerm, setSearchTerm] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
-    const [errorMessage, setErrorMessage] = useState("");
 
     const handleSearch = (e) => {
         e.preventDefault();

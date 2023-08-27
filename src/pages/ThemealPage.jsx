@@ -15,7 +15,7 @@ const ThemealPage = () => {
             .catch(error => {
                 console.error("Error fetching random meal:", error);
             });
-    }, [id]);
+    }, []);
 
         return (
             <div>
@@ -49,7 +49,7 @@ const ThemealPage = () => {
                                 <section className='meal-detail-instruction'>
                                     <h2 className='meal-text'>Instruction</h2>
                                     <p>{ingredient.strInstructions}</p>
-                                    <a className="meal-detail-youtube" href={ingredient.strYoutube}>Watch on YouTube</a>
+                                    <a className="meal-detail-youtube" href={ingredient.strYoutube} target="_blank">Watch on YouTube</a>
                                 </section>
                             </div>
                         </div>
