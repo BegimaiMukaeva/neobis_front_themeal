@@ -102,11 +102,17 @@ a {
     align-items: center;
     gap: 20px;
     margin-bottom: 40px;
+    padding: 20px;
+    width: 1000px;
+}
+.meal-block:hover {
+    border-radius: 12px;
+    background-color: rgba(238, 158, 21, 0.58);
 }
 .meal-block img {
     border-radius: 4px;
     flex-basis: 20%;
-    width: 100%;
+    width: 350px;
 }
 .meal-block-name {
     font-family: Raleway;
